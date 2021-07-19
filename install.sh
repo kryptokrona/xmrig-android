@@ -1,6 +1,4 @@
-#!/bin/bash
-
-#Build XMRIG
+!#/bin/bash
 
 termux-wake-unlock
 apt-get update
