@@ -38,7 +38,7 @@ do
     esac
 done
 
-#Ask for address
+#Ask for xkr address
 
 echo Your XKR-Address?
 
