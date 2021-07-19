@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 termux-wake-unlock
 apt-get update
