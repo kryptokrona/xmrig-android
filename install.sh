@@ -1,5 +1,7 @@
 !#/bin/bash
 
+#Build XMRIG
+
 termux-wake-unlock
 apt-get update
 apt-get install git -y
@@ -14,6 +16,7 @@ cmake -DWITH_HWLOC=OFF ..
 make
 
 #Ask for pool
+
 PS3='Where do you want to mine? '
 pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333")
 select opt in "${pool[@]}"
