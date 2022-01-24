@@ -15,7 +15,7 @@ make
 
 #Ask for pool
 PS3='Where do you want to mine? '
-pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333")
+pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333" "Drakpool.com:3333)
 select opt in "${pool[@]}"
 do
     case $opt in
@@ -29,6 +29,10 @@ do
             ;;
         "Pool.kryptokrona.se:3333")
             echo "Kryptokrona it is!"
+            break
+            ;;
+        "Drakpool.com:3333")
+            echo "Drakpool it is!"
             break
             ;;
         "Pool.gamersnest.org:3333")
