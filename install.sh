@@ -14,40 +14,16 @@ cmake -DWITH_HWLOC=OFF ..
 make
 
 #Ask for pool
-PS3='Where do you want to mine? '
-pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333" "Drakpool.com:3333)
-select opt in "${pool[@]}"
-do
-    case $opt in
-        "Swepool.org:3333")
-            echo "Swepool it is!"
-            break
-            ;;
-        "Norpool.org:3333")
-            echo "Norpool it is!"
-            break
-            ;;
-        "Pool.kryptokrona.se:3333")
-            echo "Kryptokrona it is!"
-            break
-            ;;
-        "Drakpool.com:3333")
-            echo "Drakpool it is!"
-            break
-            ;;
-        "Pool.gamersnest.org:3333")
-            break
-            ;;
-        *) echo "Gamersnest it is!";;
-    esac
+echo 'Where do you want to mine?'
+pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333")
+
+for i in "${!pool[@]}"; do
+  printf "%s\t%s\n" "$i" "${pool[$i]}"
 done
 
-#Ask for xkr address
+read opt
 
 echo Your XKR-Address?
-
 read address
-
 #Start xmrig
-
-./xmrig -a cn-pico -o $pool -u $address -p x -t 8
+echo ./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8
