@@ -26,4 +26,4 @@ read opt
 echo Your XKR-Address?
 read address
 #Start xmrig
-echo ./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8
+./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8
