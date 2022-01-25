@@ -12,6 +12,6 @@ https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US
 Then run
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/Bolibompadraken/xmrig-android/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/kryptokrona/xmrig-android/main/install.sh)
 ```
 
