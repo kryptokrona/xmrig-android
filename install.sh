@@ -26,9 +26,9 @@ echo After entering your XKR-address the miner will start. To start it again, ju
 echo Your XKR-Address?
 read address
 #Create shortcut
-echo "./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8" > start.sh
-chmod +x start.sh
 DIR=$(pwd)
+echo "${DIR}/xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8" > start.sh
+chmod +x start.sh
 alias xkr="${DIR}/start.sh"
 echo "alias xkr=${DIR}/start.sh" >> ~/.bashrc
 #Start xmrig
