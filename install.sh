@@ -22,8 +22,13 @@ for i in "${!pool[@]}"; do
 done
 
 read opt
-
+echo After entering your XKR-address the miner will start. To start it again, just enter Termux and type xkr.
 echo Your XKR-Address?
 read address
+#Create shortcut
+echo "./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8" > start.sh
+DIR=$(pwd)
+alias xkr="${DIR}/start.sh"
+echo "alias xkr=${DIR}/start.sh" >> ~/.bashrc
 #Start xmrig
 ./xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8
