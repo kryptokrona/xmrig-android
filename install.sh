@@ -27,7 +27,7 @@ echo Your XKR-Address?
 read address
 #Create shortcut
 DIR=$(pwd)
-echo "${DIR}/xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t 8" > start.sh
+echo "${DIR}/xmrig -a cn-pico -o ${pool[$opt]} -u $address -p x -t $(nproc)" > start.sh
 chmod +x start.sh
 alias xkr="${DIR}/start.sh"
 echo "alias xkr=${DIR}/start.sh" >> ~/.bashrc
