@@ -15,7 +15,7 @@ make
 
 #Ask for pool
 echo 'Where do you want to mine?'
-pool=("Swepool.org:3333" "Norpool.org:3333" "Pool.kryptokrona.se:3333" "Pool.gamersnest.org:3333" "Drakpool.com:3333")
+pool=("kryptokrona.kalf.org:3333" "fastpool.xyz:10092" "techy.ddns.net:3333" "swepool.org:3333" "privacymine.net:3333" "xkr.pool-pay.com:5387")
 
 for i in "${!pool[@]}"; do
   printf "%s\t%s\n" "$i" "${pool[$i]}"
